@@ -1,10 +1,20 @@
 package com.dxfeed.websocket.model.impl;
 
-public class AuthorizationWebSocketMessage extends AbstractDxFeedWebSocketMessage {
+public class AuthorizationStateWebSocketMessageImpl extends AbstractDxFeedWebSocketMessage {
 
+	private static final String MESSAGE_TYPE = "AUTH_STATE";
+	
 	/** Auth State. **/
 	private String state;
 
+	
+	/**
+	 * Default Public Constructor.
+	 */
+	public AuthorizationStateWebSocketMessageImpl() {
+		this.setType(MESSAGE_TYPE);
+	}
+	
 	/**
 	 * @return the state
 	 */
